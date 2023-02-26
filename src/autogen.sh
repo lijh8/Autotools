@@ -1,6 +1,6 @@
 # usage
-# ./autogen
-# ./autogen clean
+# bash ./autogen
+# bash ./autogen clean
 
 # autogen
 if (( $# == 0 )); then
