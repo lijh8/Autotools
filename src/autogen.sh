@@ -1,6 +1,11 @@
-# usage
+# Usage:
 # bash ./autogen
 # bash ./autogen clean
+# ./configure # --enable-ndebug
+# make
+# make clean
+# make DESTDIR=~/foo instal
+# ./main/.libs/main
 
 # autogen
 if (( $# == 0 )); then

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <signal.h>
 #include <sanitizer/lsan_interface.h>
+#include <assert.h>
 #include "foo.h"
 
 void handlerCont(int signum){
@@ -10,7 +11,13 @@ void handlerCont(int signum){
 #endif
 }
 
-void foo() {
+int main() {
   signal(SIGCONT, handlerCont); // kill -CONT <pid>
-  printf("foo\n");
+  printf("main\n");
+  foo();
+
+  int a[1024];
+  int n = 10240;
+  a[n] = 1;
+  assert(0);
 }
