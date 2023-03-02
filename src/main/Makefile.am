@@ -7,7 +7,7 @@ LDFLAGS += -Wl,-rpath,'$$ORIGIN/../../foo/.libs'
 LDFLAGS += -Wl,-rpath,'$$ORIGIN/../lib'
 
 if NDEBUG
-CPPFLAGS += -D NDEBUG
+CPPFLAGS += -DNDEBUG
 CFLAGS += -O3 # .cpp
 else
 CFLAGS += -g # .cpp

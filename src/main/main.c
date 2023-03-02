@@ -15,6 +15,7 @@ int main() {
   signal(SIGCONT, handlerCont); // kill -CONT <pid>
   printf("main\n");
   foo();
+  assert(0); //
 
   int a[1024];
   int n = 10240;
